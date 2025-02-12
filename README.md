@@ -12,7 +12,7 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
-DATA FRAME :
+**DATA FRAME :**
 
    Marketing Spend  Store Traffic  Sales
 0              100            500    150
