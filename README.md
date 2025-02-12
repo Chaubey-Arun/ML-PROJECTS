@@ -22,13 +22,13 @@ print(df)
 4              500            900    350
 
 
-**Step 1: Identify the target variable (y):
+# Step 1: Identify the target variable (y):
 In this case, the target variable is Sales, which is the dependent variable.
 
-Step 2: Identify the feature variables (X):
+# Step 2: Identify the feature variables (X):
 The feature variables are Marketing Spend and Store Traffic, which are the independent variables.
 
-Step 3: Split into X and y:**
+# Step 3: Split into X and y:**
 # Define the target variable (y)
 y = df['Sales']
 
@@ -37,22 +37,22 @@ X = df['Marketing Spend']
 
 
 
-**If you change the order of the variables on the left-hand side when unpacking the results from the linregress function,
-it will not assign the values correctly because each value returned by linregress corresponds to a specific statistical result in the original order.
+# If you change the order of the variables on the left-hand side when unpacking the results from the linregress function,
+# it will not assign the values correctly because each value returned by linregress corresponds to a specific statistical result in the original order.
 
-Let's break it down:
+# Let's break it down:
 
-Original Order of Returned Values from linregress(x, y):
-When you call linregress(x, y), it returns five values in the following specific order:
+# Original Order of Returned Values from linregress(x, y):
+# When you call linregress(x, y), it returns five values in the following specific order:
 
-slope
-intercept
-r_value (correlation coefficient)
-p_value
-std_err (standard error of the slope)
-So, the original assignment is like this:**
+**slope**
+**intercept**
+**r_value (correlation coefficient)**
+**p_value**
+**std_err (standard error of the slope)**
+**So, the original assignment is like this:****
 
-  mport numpy as np 
+mport numpy as np 
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
@@ -70,7 +70,7 @@ pridicted_y
 
 
 
-**1. Graph Representation of Variance in ( Y )
+# 1. Graph Representation of Variance in ( Y )
 Consider these five actual data points (●) along the ( Y )-axis:
 (SST - Total Variance)¶
  Y-axis ↑
@@ -87,9 +87,9 @@ Consider these five actual data points (●) along the ( Y )-axis:
   +-------------------> X-axis
 
 
-  2. SSR - Variation Explained by the Regression Model
+# 2. SSR - Variation Explained by the Regression Model
 **
-** Y-axis ↑
+ Y-axis ↑
   |
 10|       ●  
   |       ◌   (Predicted Ŷ)
@@ -102,7 +102,7 @@ Consider these five actual data points (●) along the ( Y )-axis:
   |       ◌   
   +-------------------> X-axis**
 
-**3. SSE - Unexplained Error
+# 3. SSE - Unexplained Error
    Y-axis ↑
   |
 10|       ● ← Residual Error (Actual Y - Predicted Ŷ)
@@ -116,7 +116,7 @@ Consider these five actual data points (●) along the ( Y )-axis:
   |       ◌   
   +-------------------> X-axis
 
-4. Summary: How They Relate
+# 4. Summary: How They Relate
 [ SST = SSR + SSE ]**
 
 y_mean=np.mean(y)
